@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/FractalGenerator.iml" filepath="$PROJECT_DIR$/FractalGenerator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Fractal-Generator.iml" filepath="$PROJECT_DIR$/Fractal-Generator.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

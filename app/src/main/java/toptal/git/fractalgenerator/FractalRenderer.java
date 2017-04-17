@@ -104,18 +104,19 @@ public class FractalRenderer implements GLSurfaceView.Renderer {
 
     public void add(double dx, double dy) {
         //Both are scaled by mHeight, because the ratio is taken into account by the translation matrix
-        mX+=dx/(mZoom*mHeight);
-        mY+=dy/(mZoom*mHeight);
+        mX-=dx/(mZoom*mHeight);
+        mY-=dy/(mZoom*mHeight);
     }
 
     private double zoomIncrease = 1.5;
 
     public void zoom(double scaleFactor, double x, double y) {
         scaleFactor = (scaleFactor-1)*zoomIncrease+1;
-        // Default zoom is to top center of the screen. Thus, changes should be zeroed at that point
+        // Default zoom is to top corner of the screen. Thus, changes should be zeroed at that point
         x-=mWidth/2;
+        y-=mHeight/2;
 
-        //Note that, because mZoom changse in the add method, there is an implicit division by log(2) hidden through limit discrete summation/integration
+        //Note that, because mZoom changes in the add method, there is an implicit division by log(2) hidden through limit discrete summation/integration
         double scale = Math.log(scaleFactor);
 
         //Move towards focus
